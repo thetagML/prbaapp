@@ -2,7 +2,10 @@ components:
 - components: []
   layout_properties: {slot: default}
   name: content_panel
-  properties: {col_widths: '{}'}
+  properties:
+    col_widths: '{}'
+    spacing:
+      margin: ['50', null, null, null]
   type: ColumnPanel
 - components:
   - event_bindings: {click: projects_menu_click}
@@ -23,11 +26,33 @@ components:
     type: Link
   layout_properties: {slot: left-nav}
   name: left_nav_panel
-  properties: {col_widths: '{}'}
+  properties:
+    col_widths: '{}'
+    spacing:
+      margin: ['40', null, null, null]
   type: ColumnPanel
 - layout_properties: {slot: title}
   name: label_1
-  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Task Manager App, tooltip: '', underline: false, visible: true}
+  properties:
+    align: left
+    background: ''
+    bold: false
+    border: ''
+    font: ''
+    font_size: null
+    foreground: ''
+    icon: ''
+    icon_align: left
+    italic: false
+    role: null
+    spacing:
+      margin: ['45', null, null, null]
+    spacing_above: small
+    spacing_below: small
+    text: Task Manager App
+    tooltip: ''
+    underline: false
+    visible: true
   type: Label
 - components:
   - event_bindings: {click: logout_link_click}
@@ -41,6 +66,6 @@ components:
   type: FlowPanel
 container:
   event_bindings: {}
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
 is_package: true
