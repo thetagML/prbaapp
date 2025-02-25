@@ -1,0 +1,33 @@
+components:
+- components:
+  - components:
+    - components: []
+      data_bindings:
+      - {code: 'self.item[''project_name'']', property: text}
+      event_bindings: {click: open_project_link_click}
+      layout_properties: {expand: true, grid_position: 'NPBNCR,ULVOPN', width: null}
+      name: open_project_link
+      properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: 16, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: none, spacing_below: none, text: '', tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+      type: Link
+    - event_bindings: {click: comment_link_click}
+      layout_properties: {grid_position: 'NPBNCR,UGIZZF'}
+      name: comment_link
+      properties: {align: right, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: '', icon: 'fa:comment', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: none, text: '', tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+      type: Link
+    - event_bindings: {click: delete_project_link_click}
+      layout_properties: {grid_position: 'NPBNCR,PVLQRI'}
+      name: delete_project_link
+      properties: {align: right, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 16, foreground: '', icon: 'fa:trash', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: none, text: '', tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+      type: Link
+    layout_properties: {grid_position: 'NPBNCR,XJHXGQ'}
+    name: flow_panel_1
+    properties: {align: justify, background: '', border: '', foreground: '', role: null, spacing: medium, spacing_above: small, spacing_below: small, tooltip: '', visible: true}
+    type: FlowPanel
+  layout_properties: {grid_position: 'DKPCOZ,FPHPWT'}
+  name: elevated_card_1
+  properties: {col_widths: '{"XJHXGQ":6}', role: elevated-card}
+  type: ColumnPanel
+container:
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+is_package: true

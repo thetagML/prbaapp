@@ -1,0 +1,46 @@
+components:
+- components: []
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+- components:
+  - event_bindings: {click: projects_menu_click}
+    layout_properties: {grid_position: 'VDCBCZ,PPPURJ'}
+    name: projects_menu
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 18, foreground: '', icon: '', icon_align: right, italic: false, role: title, spacing_above: small, spacing_below: small, text: All Projects, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  - components: []
+    layout_properties: {grid_position: 'TGGYKN,ZZXLAT'}
+    name: link_panel
+    properties: {col_widths: '{}'}
+    type: ColumnPanel
+  - components: []
+    event_bindings: {click: create_new_click}
+    layout_properties: {grid_position: 'VPGHOE,ZOORJX'}
+    name: create_new
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '{}', font: '', font_size: null, foreground: 'theme:Primary', icon: 'fa:plus', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Create New Project, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  layout_properties: {slot: left-nav}
+  name: left_nav_panel
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: Task Manager App, tooltip: '', underline: false, visible: true}
+  type: Label
+- components:
+  - event_bindings: {click: logout_link_click}
+    layout_properties: {}
+    name: logout_link
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: 'fa:sign-out', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  layout_properties: {grid_position: 'OUCZSG,DLMIGF', slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+container:
+  event_bindings: {}
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

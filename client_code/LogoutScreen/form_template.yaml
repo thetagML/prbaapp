@@ -1,0 +1,18 @@
+components:
+- layout_properties: {grid_position: 'JCASYW,UPKRLS'}
+  name: spacer_1
+  properties: {height: 119}
+  type: Spacer
+- layout_properties: {grid_position: 'CXMFLD,MIEYWT'}
+  name: label_1
+  properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: title, spacing_above: small, spacing_below: small, text: You have been logged out., tooltip: '', underline: false, visible: true}
+  type: Label
+- event_bindings: {click: login_button_click}
+  layout_properties: {grid_position: 'CUFJYB,FFFXVC'}
+  name: login_button
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: filled-button, spacing_above: small, spacing_below: small, text: Login, tooltip: '', underline: false, visible: true}
+  type: Button
+container:
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+is_package: true

@@ -1,0 +1,15 @@
+components:
+- layout_properties: {column: MTHMAS}
+  name: label_2
+  properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: none, spacing_below: none, text: label, tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {column: BDQAII}
+  name: link_1
+  properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: none, spacing_below: none, text: link, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+  type: Link
+- layout_properties: {column: EDDORO}
+  name: check_box_1
+  properties: {align: left, allow_indeterminate: false, background: '', bold: false, border: '', checked: false, enabled: true, font: '', font_size: null, foreground: '', italic: false, role: null, spacing_above: none, spacing_below: none, text: '', tooltip: '', underline: false, visible: true}
+  type: CheckBox
+container: {type: DataRowPanel}
+is_package: true
