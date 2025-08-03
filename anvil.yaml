@@ -7,14 +7,6 @@ db_schema:
     - admin_ui: {width: 200}
       name: comment
       type: string
-    - admin_ui: {width: 200}
-      name: user
-      target: users
-      type: link_single
-    - admin_ui: {width: 200}
-      name: project
-      target: desktops
-      type: link_single
     server: full
     title: comments
   desktops:
@@ -30,48 +22,57 @@ db_schema:
     title: desktops
   docaccess:
     client: none
-    columns: []
+    columns:
+    - admin_ui: {width: 131}
+      name: docID
+      type: number
+    - admin_ui: {width: 157}
+      name: rights
+      type: simpleObject
     server: full
     title: docaccess
   docs:
     client: none
     columns:
-    - admin_ui: {order: 0, width: 131}
+    - admin_ui: {width: 131}
       name: ID
       type: number
-    - admin_ui: {order: 1, width: 116}
-      name: type
-      type: string
-    - admin_ui: {order: 0.5, width: 140}
+    - admin_ui: {width: 140}
       name: title
       type: string
-    - admin_ui: {order: 2, width: 133}
+    - admin_ui: {width: 116}
+      name: type
+      type: string
+    - admin_ui: {width: 133}
       name: content
       type: string
-    - admin_ui: {order: 3, width: 159}
+    - admin_ui: {width: 159}
       name: created
       type: datetime
-    - admin_ui: {order: 4, width: 154}
+    - admin_ui: {width: 154}
       name: modified
       type: datetime
-    - admin_ui: {order: 5, width: 135}
+    - admin_ui: {width: 135}
       name: logs
       type: simpleObject
+    - admin_ui: {width: 200}
+      name: parentID
+      type: number
     server: full
     title: docs
   docversions:
     client: none
     columns:
-    - admin_ui: {order: 0, width: 106}
+    - admin_ui: {width: 106}
       name: ID
       type: string
-    - admin_ui: {order: 1, width: 141}
+    - admin_ui: {width: 141}
       name: docID
       type: number
-    - admin_ui: {order: 2, width: 118}
+    - admin_ui: {width: 118}
       name: desc
       type: string
-    - admin_ui: {order: 3, width: 160}
+    - admin_ui: {width: 160}
       name: created
       type: datetime
     server: full
@@ -79,32 +80,55 @@ db_schema:
   files:
     client: none
     columns:
-    - admin_ui: {order: 0, width: 116}
+    - admin_ui: {width: 116}
       name: ID
       type: number
-    - admin_ui: {order: 1, width: 107}
+    - admin_ui: {width: 107}
       name: title
       type: string
-    - admin_ui: {order: 2, width: 127}
+    - admin_ui: {width: 127}
       name: type
       type: string
-    - admin_ui: {order: 3, width: 200}
+    - admin_ui: {width: 200}
       name: content
       type: string
-    - admin_ui: {order: 4, width: 126}
+    - admin_ui: {width: 126}
       name: contentM
       type: media
-    - admin_ui: {order: 5, width: 163}
+    - admin_ui: {width: 163}
       name: created
       type: datetime
-    - admin_ui: {order: 6, width: 153}
+    - admin_ui: {width: 153}
       name: modified
       type: datetime
-    - admin_ui: {order: 7, width: 136}
+    - admin_ui: {width: 136}
       name: logs
       type: simpleObject
     server: full
     title: files
+  logs:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 128}
+      name: ID
+      type: number
+    - admin_ui: {order: 1, width: 130}
+      name: log
+      type: string
+    - admin_ui: {order: 2, width: 126}
+      name: type
+      type: string
+    - admin_ui: {order: 3, width: 145}
+      name: content
+      type: simpleObject
+    - admin_ui: {order: 4, width: 200}
+      name: created
+      type: datetime
+    - admin_ui: {order: 5, width: 200}
+      name: user
+      type: number
+    server: full
+    title: logs
   messages:
     client: none
     columns:
@@ -117,13 +141,13 @@ db_schema:
     - admin_ui: {width: 110}
       name: title
       type: string
-    - admin_ui: {order: 3, width: 118}
+    - admin_ui: {width: 118}
       name: message
       type: string
-    - admin_ui: {order: 4, width: 117}
+    - admin_ui: {width: 117}
       name: type
       type: string
-    - admin_ui: {order: 5, width: 144}
+    - admin_ui: {width: 144}
       name: attachments
       type: simpleObject
     server: full
@@ -202,6 +226,20 @@ db_schema:
       type: string
     server: full
     title: settings
+  tcomments:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 142}
+      name: table
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: field
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      name: comment
+      type: string
+    server: full
+    title: tcomments
   users:
     client: none
     columns:
@@ -230,14 +268,14 @@ db_schema:
       name: signed_up
       type: datetime
     - admin_ui: {width: 200}
-      name: hats
-      type: string
-    - admin_ui: {width: 200}
       name: remembered_logins
       type: simpleObject
     - admin_ui: {width: 200}
       name: userroles
       type: simpleObject
+    - admin_ui: {order: 10, width: 200}
+      name: tcomment
+      type: string
     server: full
     title: users
 dependencies: []
