@@ -1,17 +1,6 @@
 allow_embedding: false
 correct_dependency_ids: {}
 db_schema:
-  columns:
-    client: none
-    columns:
-    - admin_ui: {width: 200}
-      name: title
-      type: string
-    - admin_ui: {width: 200}
-      name: type
-      type: string
-    server: full
-    title: Columns
   comments:
     client: none
     columns:
@@ -24,81 +13,205 @@ db_schema:
       type: link_single
     - admin_ui: {width: 200}
       name: project
-      target: projects
+      target: desktops
       type: link_single
     server: full
-    title: Comments
+    title: comments
+  desktops:
+    client: search
+    columns:
+    - admin_ui: {width: 200}
+      name: desktopname
+      type: string
+    - admin_ui: {width: 200}
+      name: logs
+      type: simpleObject
+    server: full
+    title: desktops
+  docaccess:
+    client: none
+    columns: []
+    server: full
+    title: docaccess
+  docs:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 131}
+      name: ID
+      type: number
+    - admin_ui: {order: 1, width: 116}
+      name: type
+      type: string
+    - admin_ui: {order: 0.5, width: 140}
+      name: title
+      type: string
+    - admin_ui: {order: 2, width: 133}
+      name: content
+      type: string
+    - admin_ui: {order: 3, width: 159}
+      name: created
+      type: datetime
+    - admin_ui: {order: 4, width: 154}
+      name: modified
+      type: datetime
+    - admin_ui: {order: 5, width: 135}
+      name: logs
+      type: simpleObject
+    server: full
+    title: docs
+  docversions:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 106}
+      name: ID
+      type: string
+    - admin_ui: {order: 1, width: 141}
+      name: docID
+      type: number
+    - admin_ui: {order: 2, width: 118}
+      name: desc
+      type: string
+    - admin_ui: {order: 3, width: 160}
+      name: created
+      type: datetime
+    server: full
+    title: docversions
+  files:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 116}
+      name: ID
+      type: number
+    - admin_ui: {order: 1, width: 107}
+      name: title
+      type: string
+    - admin_ui: {order: 2, width: 127}
+      name: type
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      name: content
+      type: string
+    - admin_ui: {order: 4, width: 126}
+      name: contentM
+      type: media
+    - admin_ui: {order: 5, width: 163}
+      name: created
+      type: datetime
+    - admin_ui: {order: 6, width: 153}
+      name: modified
+      type: datetime
+    - admin_ui: {order: 7, width: 136}
+      name: logs
+      type: simpleObject
+    server: full
+    title: files
   messages:
     client: none
     columns:
-    - admin_ui: {order: 0, width: 200}
+    - admin_ui: {width: 200}
       name: ID
       type: number
-    - admin_ui: {order: 1, width: 132}
+    - admin_ui: {width: 132}
       name: hasTitle
       type: bool
+    - admin_ui: {width: 110}
+      name: title
+      type: string
+    - admin_ui: {order: 3, width: 118}
+      name: message
+      type: string
+    - admin_ui: {order: 4, width: 117}
+      name: type
+      type: string
+    - admin_ui: {order: 5, width: 144}
+      name: attachments
+      type: simpleObject
     server: full
     title: messages
+  msgstree:
+    client: none
+    columns:
+    - admin_ui: {width: 200}
+      name: parentID
+      type: number
+    - admin_ui: {width: 144}
+      name: childID
+      type: number
+    - admin_ui: {width: 162}
+      name: childOrder
+      type: number
+    server: full
+    title: msgstree
+  msgsvis:
+    client: none
+    columns:
+    - admin_ui: {width: 131}
+      name: userID
+      type: number
+    - admin_ui: {width: 143}
+      name: msgID
+      type: number
+    - admin_ui: {width: 157}
+      name: read
+      type: datetime
+    - admin_ui: {width: 124}
+      name: tags
+      type: string
+    - admin_ui: {width: 164}
+      name: created
+      type: datetime
+    - admin_ui: {width: 166}
+      name: modified
+      type: datetime
+    server: full
+    title: msgsvis
   orgs:
     client: none
     columns:
-    - admin_ui: {order: 0, width: 121}
+    - admin_ui: {width: 121}
       name: ID
       type: number
-    - admin_ui: {order: 1, width: 138}
+    - admin_ui: {width: 138}
       name: org
       type: string
-    - admin_ui: {order: 2, width: 137}
+    - admin_ui: {width: 137}
       name: description
       type: string
-    - admin_ui: {order: 3, width: 143}
+    - admin_ui: {width: 143}
       name: active
       type: bool
-    - admin_ui: {order: 4, width: 157}
+    - admin_ui: {width: 157}
       name: created
       type: datetime
-    - admin_ui: {order: 5, width: 170}
+    - admin_ui: {width: 170}
       name: modified
       type: datetime
-    - admin_ui: {order: 6, width: 147}
+    - admin_ui: {width: 147}
       name: logs
       type: string
-    - admin_ui: {order: 7, width: 200}
+    - admin_ui: {width: 200}
       name: external
       type: bool
     server: full
     title: orgs
-  projects:
-    client: search
-    columns:
-    - admin_ui: {width: 200}
-      name: project_name
-      type: string
-    - admin_ui: {width: 200}
-      name: columns
-      target: columns
-      type: link_multiple
-    server: full
-    title: Projects
-  rows:
+  settings:
     client: none
     columns:
     - admin_ui: {width: 200}
-      name: project
-      target: projects
-      type: link_single
-    - admin_ui: {width: 1165}
-      name: data
-      type: simpleObject
+      name: apptitle
+      type: string
     server: full
-    title: Rows
+    title: settings
   users:
     client: none
     columns:
-    - admin_ui: {order: 0, width: 124}
+    - admin_ui: {width: 121}
+      name: ID
+      type: number
+    - admin_ui: {width: 124}
       name: email
       type: string
-    - admin_ui: {order: 1, width: 135}
+    - admin_ui: {width: 135}
       name: enabled
       type: bool
     - admin_ui: {width: 200}
@@ -107,31 +220,28 @@ db_schema:
     - admin_ui: {width: 159}
       name: password_hash
       type: string
-    - admin_ui: {order: 4, width: 174}
+    - admin_ui: {width: 174}
       name: n_password_failures
       type: number
-    - admin_ui: {order: 5, width: 151}
+    - admin_ui: {width: 151}
       name: confirmed_email
       type: bool
     - admin_ui: {width: 200}
       name: signed_up
       type: datetime
-    - admin_ui: {order: 7, width: 200}
+    - admin_ui: {width: 200}
       name: hats
       type: string
     - admin_ui: {width: 200}
       name: remembered_logins
       type: simpleObject
-    - admin_ui: {order: 9, width: 200}
+    - admin_ui: {width: 200}
       name: userroles
       type: simpleObject
-    - admin_ui: {order: -1, width: 121}
-      name: ID
-      type: number
     server: full
-    title: Users
+    title: users
 dependencies: []
-metadata: {description: A simple task management app demonstrating the Anvil Material 3 theme., title: Task Manager App}
+metadata: {description: 'Ez a legelső verzió, ami még minimálisan használható kizárólagosan a legfontosabb dolgokkal, ami működésbizonsági dolgokat is jelent, nem csak funckionalitást.', title: TBS}
 name: Clone of Task Manager App
 package_name: Material_Design_46
 renamed: true

@@ -7,8 +7,6 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 
-USER_COLORS = ['Primary', 'Secondary', 'Tertiary', 'Primary Container', 'On Secondary Container']
-
 @anvil.server.callable(require_user=True)
 def add_project_to_table(project_name):
   project_row = app_tables.projects.add_row(project_name=project_name)
@@ -94,14 +92,7 @@ def delete_comment(row):
 def get_user_emails_and_colors():
   users = app_tables.users.search()
   emails = [user['email'] for user in users]
-  colors = {user['email']: f"theme:{user['color']}" for user in users}
-  return emails, colors 
-
-@anvil.server.callable(require_user=True)
-def add_user_color():
-  user_row = anvil.users.get_user()
-  num_of_users = len(app_tables.users.search())
-  user_row['color'] = USER_COLORS[num_of_users%5]
+  return emails
 
 @anvil.server.callable(require_user=True)
 def delete_project(project_row):
