@@ -12,12 +12,27 @@ db_schema:
   desktops:
     client: search
     columns:
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 0, width: 117}
       name: desktopname
       type: string
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 1, width: 131}
       name: logs
       type: simpleObject
+    - admin_ui: {order: 2, width: 119}
+      name: user
+      type: number
+    - admin_ui: {order: 3, width: 99}
+      name: type
+      type: string
+    - admin_ui: {order: 4, width: 126}
+      name: content
+      type: simpleObject
+    - admin_ui: {order: 5, width: 119}
+      name: open
+      type: number
+    - admin_ui: {order: 6, width: 200}
+      name: archived
+      type: bool
     server: full
     title: desktops
   docaccess:
@@ -226,20 +241,6 @@ db_schema:
       type: string
     server: full
     title: settings
-  tcomments:
-    client: none
-    columns:
-    - admin_ui: {order: 0, width: 142}
-      name: table
-      type: string
-    - admin_ui: {order: 1, width: 200}
-      name: field
-      type: string
-    - admin_ui: {order: 2, width: 200}
-      name: comment
-      type: string
-    server: full
-    title: tcomments
   users:
     client: none
     columns:
@@ -279,7 +280,7 @@ db_schema:
     server: full
     title: users
 dependencies: []
-metadata: {description: 'Ez a legelső verzió, ami még minimálisan használható kizárólagosan a legfontosabb dolgokkal, ami működésbizonsági dolgokat is jelent, nem csak funckionalitást.', title: TBS}
+metadata: {description: 'Ez a legelső verzió, ami még minimálisan használható kizárólagosan a legfontosabb dolgokkal, ami működésbizonsági dolgokat is jelent, nem csak funckionalitást.', logo_img: 'asset:icon-512.png', title: TBS}
 name: Clone of Task Manager App
 package_name: Material_Design_46
 renamed: true

@@ -228,7 +228,7 @@ color: %color:On Primary Container%;
   top: 0;
   left: 0;
   flex-shrink: 0;
-  min-width: 240px;
+  min-width: 220px;
   max-width: 400px;
 }
 

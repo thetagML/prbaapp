@@ -1,28 +1,19 @@
 from ._anvil_designer import FrameTemplate
 from anvil import *
-import anvil.facebook.auth
-import anvil.google.auth, anvil.google.drive
-from anvil.google.drive import app_files
 import anvil.users
 import anvil.server
-import plotly.graph_objects as go
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from ..ProjectView import ProjectView
 from ..ProjectList import ProjectList
 
-
-
 class Frame(FrameTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-        self.content_panel.add_component(ProjectList())
-        # anvil.users.login_with_form()
-        # anvil.server.call('add_color_to_user')
-        self.add_project_links()
-
+        #self.content_panel.add_component(ProjectList())
+        #self.add_project_links()
 
     def add_project_links(self):
         self.link_panel.clear()
@@ -70,5 +61,6 @@ class Frame(FrameTemplate):
         """This method is called when the link is clicked"""
         anvil.users.logout()
         open_form('LogoutScreen')
+
 
 
