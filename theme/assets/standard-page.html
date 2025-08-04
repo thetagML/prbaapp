@@ -55,6 +55,7 @@
   }
   
   $('.sidebar-toggle, .nav-shield').off('click').on('click', function() { 
+    return
     if (ln.is(":visible") || $('.nav-shield').is(".shown")) {
       hideSidebar();
     } else if(!ln.is(":empty")) {

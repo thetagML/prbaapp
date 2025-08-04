@@ -8,14 +8,14 @@ components:
       margin: ['50', null, null, null]
   type: ColumnPanel
 - components:
-  - event_bindings: {click: link_2_click}
+  - event_bindings: {}
     layout_properties: {grid_position: 'EKDZTI,HWENBW'}
     name: link_2
     properties: {font_size: 16, text: Dashboard}
     type: Link
   - layout_properties: {grid_position: 'OMTMTJ,KYTEPS'}
     name: link_3
-    properties: {font_size: 16, text: Communications}
+    properties: {font_size: 16, italic: true, text: Communications}
     type: Link
   - layout_properties: {grid_position: 'FEJLMD,MMURLH'}
     name: link_4
@@ -49,7 +49,7 @@ components:
       margin: ['40', null, null, null]
   type: ColumnPanel
 - layout_properties: {slot: title}
-  name: label_1
+  name: apptitle
   properties:
     align: left
     background: ''
@@ -63,7 +63,7 @@ components:
     italic: false
     role: null
     spacing:
-      margin: ['45', null, null, null]
+      margin: ['45', '40', null, null]
     spacing_above: small
     spacing_below: small
     text: TBS
