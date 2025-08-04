@@ -25,12 +25,16 @@ class Frame(FrameTemplate):
       jQuery( ".content" ).css( "margin-top", "9px" )
       jQuery( ".sidebar-toggle" ).css( "margin-top", "0px" )
       jQuery( ".title.anvil-inline-container div" ).css( "margin-top", "0px" )
-
+      el = jQuery( ".left-nav .anvil-panel-section" )[ 0 ].parentElement
+      el.style.marginTop =  "0px"
+      el.style.paddingTop =  "6px"
+      el.style.paddingBottom =  "12px"
+      el.style.height = "calc(100% - 24px)"
 
       #move to the bottom
       el = anvil.js.get_dom_node( self.create_new )
       el.parentElement.parentElement.parentElement.parentElement.parentElement.style.position = "absolute"
-      el.parentElement.parentElement.parentElement.parentElement.parentElement.style.bottom = "0"
+      el.parentElement.parentElement.parentElement.parentElement.parentElement.style.bottom = "12px"
   
     def add_project_links(self):
         self.link_panel.clear()
