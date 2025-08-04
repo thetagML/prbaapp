@@ -15,7 +15,7 @@ components:
     type: Link
   - layout_properties: {grid_position: 'OMTMTJ,KYTEPS'}
     name: link_3
-    properties: {font_size: 16, italic: true, text: Communications}
+    properties: {font_size: 16, italic: false, text: Communications}
     type: Link
   - layout_properties: {grid_position: 'FEJLMD,MMURLH'}
     name: link_4
