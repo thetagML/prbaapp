@@ -305,3 +305,4 @@ services:
   source: /runtime/services/facebook.yml
 startup: {module: StartupModule, type: module}
 startup_form: null
+uplink_visible: true
