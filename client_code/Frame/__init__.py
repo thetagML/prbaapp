@@ -10,6 +10,8 @@ from ..ProjectList import ProjectList
 import anvil.js
 from anvil.js.window import jQuery
 
+debugger;
+
 class Frame(FrameTemplate):
     def __init__(self, **properties):
         # Set Form properties and Data Bindings.
